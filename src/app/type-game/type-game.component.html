@@ -1,0 +1,40 @@
+
+<div class="shadow p-3 mb-5 bg-white rounded">
+<div ng-If="randomSentenceArray" class="container">
+
+    <div class="grid">
+    <div class="row">
+      <div *ngFor="let word of randomSentenceArray; let i = index">
+          
+          <div id="w{{i}}" class="inactive" >
+          {{word}}  
+          </div>
+    </div>      
+    </div>
+</div>
+</div>
+<br />     
+
+<div class="container">
+
+    <form name="typeTest" (keydown)="keyDownFunction($event)">
+        <input type="text" [(ngModel)]="userInput" name="inputValue" class="input"  placeholder="{{randomSentenceArray[arrayIncrement]}}" autofocus="true"/>
+          
+        {{checkInput}}
+    </form>
+</div>
+</div>
+
+    <p  class="text-center">{{timeLeft}} Seconds Left....</p> 
+    <h6 class="text-center"> Aantal woorden correct: {{score}} </h6>
+    <h6 class="text-center"> Aantal incorrecte pogingen: {{negativeScore}} </h6> 
+    <div [innerHTML]="scoreMessage">  </div> 
+    <h5 class="text-center">{{endScore}} </h5>
+    
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+
+
