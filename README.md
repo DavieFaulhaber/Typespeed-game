@@ -1,3 +1,7 @@
+This is a component for a game-site, it is a part of the final project for a traineeship.
+
+
+
 # TypeGame
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.4.
